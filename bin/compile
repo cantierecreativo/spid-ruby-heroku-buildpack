@@ -2,6 +2,7 @@
 # bin/release <build-dir>
 
 cd $1
-
+echo "Installo i metadata in locale"
 bundle exec rake spid:fetch_idp_metadata
+echo "Fatto"
 exit 0

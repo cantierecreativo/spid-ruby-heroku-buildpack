@@ -6,7 +6,7 @@ cd $1
 cat Gemfile.lock | grep -E ' spid \(' > /dev/null
 
 if [ $? -eq 0 ]; then
-    echo 'Esiste'
+    echo 'Spid'
     exit 0
 else
     >&2 echo 'spid gem is not installed'

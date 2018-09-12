@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+cd $1
+
+bundle exec rake spid:fetch_idp_metadata
+exit 0

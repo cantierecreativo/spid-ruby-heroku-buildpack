@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+cd $1
+
+bundle show spid
+
+if [ $? -eq 0 ]; then
+    echo 'Esiste'
+    exit 0
+else
+    >&2 echo 'spid gem is not installed'
+    exit 1
+fi
